@@ -9,12 +9,24 @@ public class ControlFlowExercises {
 //            i++;
 //        }
 
-        int j = 0;
-        do {
-            {
-                System.out.println(j++);
-            }
-        } while (j++ <= 100);
+//        int j = 0;
+//        do {
+//            {
+//                System.out.println(j++);
+//            }
+//        } while (j++ <= 100);
+
+
+        int k =105;
+        do{
+            k=k-5;
+            System.out.println(+k);
+        }
+        while (k > -10);
+
+
+
+
 
     }
 }
