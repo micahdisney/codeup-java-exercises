@@ -73,51 +73,75 @@ public class ControlFlowExercises {
 //        }
 
 
+//        System.out.println();
+//
+//        Scanner sc = new Scanner(System.in);
+//        String yesNo = "Y";
+//
+//        do
+//        {
+//            System.out.print("What number would you like to go up to? ");
+//            int userNumber = sc.nextInt();
+//            System.out.print("\n ");
+//            System.out.print("Here is your table!\n ");
+//            System.out.print("\n ");
+//
+//
+//            String colTitles = " Number  |  " + "Squared  | " + " Cubed   " + "\n"
+//                    +   "-------- | " + "--------- |" + " -------   ";
+//            System.out.println(colTitles);
+//
+//            int squared = 0;
+//            int cubed = 0;
+//
+//            String row = "";
+//
+//            for (int i = 1; i <= userNumber; i++)
+//            {
+//
+//                squared = i * i;
+//                cubed = i * i * i;
+//
+//                row = "    "+ i + "    |    "+ squared + "      |    "+ cubed;
+//                System.out.println(row);
+//            }
+//
+//            System.out.print("Would you like to continue? (Y/N): ");
+//            yesNo = sc.next();
+//            System.out.println();
+//
+//        }
+//        while (!yesNo.equalsIgnoreCase("N"));
 
 
         System.out.println();
 
         Scanner sc = new Scanner(System.in);
-        String yesNo = "Y";
+        String yesNo;
 
-        do
-        {
-            System.out.print("What number would you like to go up to? ");
+        do {
+            System.out.print("Enter your numerical grade to get letter grade:  ");
             int userNumber = sc.nextInt();
-            System.out.print("\n ");
-            System.out.print("Here is your table!\n ");
-            System.out.print("\n ");
 
-
-            String colTitles = " Number  |  " + "Squared  | " + " Cubed   " + "\n"
-                    +   "-------- | " + "--------- |" + " -------   ";
-            System.out.println(colTitles);
-
-            int squared = 0;
-            int cubed = 0;
-
-            String row = "";
-
-            for (int i = 1; i <= userNumber; i++)
-            {
-
-                squared = i * i;
-                cubed = i * i * i;
-
-                row = "    "+ i + "    |    "+ squared + "      |    "+ cubed;
-                System.out.println(row);
+            if (userNumber >= 90) {
+                System.out.println("Your grade is: A");
+            } else if (userNumber >= 80) {
+                System.out.println("Your grade is: B");
+            } else if (userNumber >= 70) {
+                System.out.println("Your grade is: C");
+            } else if (userNumber >= 60) {
+                System.out.println("Your grade is: D");
+            } else {
+                System.out.println("Your grade is: F");
             }
 
-            System.out.print("Would you like to continue? (Y/N): ");
+
+            System.out.print("Would you like to enter another grade? (Y/N): ");
             yesNo = sc.next();
             System.out.println();
 
         }
-        while (!yesNo.equalsIgnoreCase("N"));
-
-
-
-
+        while (!yesNo.equalsIgnoreCase("N")) ;
 
     }
 }
