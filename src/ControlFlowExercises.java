@@ -17,15 +17,20 @@ public class ControlFlowExercises {
 //        } while (j++ <= 100);
 
 
-        int k =105;
+//        int k =105;
+//        do{
+//            k=k-5;
+//            System.out.println(+k);
+//        }
+//        while (k > -10);
+
+
+        int k = 2;
         do{
-            k=k-5;
+            k = k*k;
             System.out.println(+k);
         }
-        while (k > -10);
-
-
-
+        while (k < 65536);
 
 
     }
