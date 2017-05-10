@@ -123,14 +123,24 @@ public class ControlFlowExercises {
             System.out.print("Enter your numerical grade to get letter grade:  ");
             int userNumber = sc.nextInt();
 
-            if (userNumber >= 90) {
+            if (userNumber >= 97) {
+                System.out.println("Your grade is: A+");
+            } else if (userNumber >= 94) {
                 System.out.println("Your grade is: A");
-            } else if (userNumber >= 80) {
+            } else if (userNumber >= 90) {
+                System.out.println("Your grade is: A-");
+            } else if (userNumber >= 87) {
+                System.out.println("Your grade is: B+");
+            } else if (userNumber >= 84) {
                 System.out.println("Your grade is: B");
-            } else if (userNumber >= 70) {
+            } else if (userNumber >= 80) {
+                System.out.println("Your grade is: B-");
+            } else if (userNumber >= 77) {
+                System.out.println("Your grade is: C+");
+            } else if (userNumber >= 74) {
                 System.out.println("Your grade is: C");
-            } else if (userNumber >= 60) {
-                System.out.println("Your grade is: D");
+            } else if (userNumber >= 70) {
+                System.out.println("Your grade is: C-");
             } else {
                 System.out.println("Your grade is: F");
             }
