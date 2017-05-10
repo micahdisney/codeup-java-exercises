@@ -9,6 +9,11 @@ public class ControlFlowExercises {
 //            i++;
 //        }
 
+        for(int i = 5; i <= 15; i++)
+        {
+            System.out.println(i);
+        }
+
 //        int j = 0;
 //        do {
 //            {
@@ -16,6 +21,12 @@ public class ControlFlowExercises {
 //            }
 //        } while (j++ <= 100);
 
+
+        int j;
+        for(j=0; j<=98; ) {
+            j = j + 2;
+            System.out.println(j);
+        }
 
 //        int k =105;
 //        do{
@@ -25,12 +36,27 @@ public class ControlFlowExercises {
 //        while (k > -10);
 
 
-        int k = 2;
-        do{
-            k = k*k;
-            System.out.println(+k);
+        int k;
+        for(k=105; k> -10; ) {
+            k = k - 5;
+            System.out.println(k);
         }
-        while (k < 65536);
+
+
+//        int l = 2;
+//        do{
+//            l = l*l;
+//            System.out.println(+l);
+//        }
+//        while (l < 65536);
+
+        int l;
+        for(l = 2; l < 65536;) {
+            l = l * l;
+            System.out.println(l);
+        }
+
+
 
 
     }
