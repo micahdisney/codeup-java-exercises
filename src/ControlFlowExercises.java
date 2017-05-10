@@ -1,6 +1,10 @@
+import java.util.Scanner;
+
 /**
  * Created by micahdisney on 5/9/17.
  */
+
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
 ////        int i = 5;
@@ -57,16 +61,61 @@ public class ControlFlowExercises {
 //        }
 
 
-        for(int i = 1 ; i <= 100 ; ++i){
-            if(i % (5 * 3) == 0){
-                System.out.println("FizzBuzz");
-            } else if (i % 3 == 0){
-                System.out.println("Fizz");
-            } else if (i % 5 == 0){
-                System.out.println("Buzz");
-            } else
-                System.out.println(i);
+//        for(int i = 1 ; i <= 100 ; ++i){
+//            if(i % (5 * 3) == 0){
+//                System.out.println("FizzBuzz");
+//            } else if (i % 3 == 0){
+//                System.out.println("Fizz");
+//            } else if (i % 5 == 0){
+//                System.out.println("Buzz");
+//            } else
+//                System.out.println(i);
+//        }
+
+
+
+
+        System.out.println();
+
+        Scanner sc = new Scanner(System.in);
+        String yesNo = "Y";
+
+        do
+        {
+            System.out.print("What number would you like to go up to? ");
+            int userNumber = sc.nextInt();
+            System.out.print("\n ");
+            System.out.print("Here is your table!\n ");
+            System.out.print("\n ");
+
+
+            String colTitles = " Number  |  " + "Squared  | " + " Cubed   " + "\n"
+                    +   "-------- | " + "--------- |" + " -------   ";
+            System.out.println(colTitles);
+
+            int squared = 0;
+            int cubed = 0;
+
+            String row = "";
+
+            for (int i = 1; i <= userNumber; i++)
+            {
+
+                squared = i * i;
+                cubed = i * i * i;
+
+                row = "    "+ i + "    |    "+ squared + "      |    "+ cubed;
+                System.out.println(row);
+            }
+
+            System.out.print("Would you like to continue? (Y/N): ");
+            yesNo = sc.next();
+            System.out.println();
+
         }
+        while (!yesNo.equalsIgnoreCase("N"));
+
+
 
 
 
