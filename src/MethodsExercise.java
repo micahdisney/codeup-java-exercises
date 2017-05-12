@@ -53,35 +53,67 @@ public class MethodsExercise {
 //        return x % y;
 //    }
 
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        int userSelection;
+//        String yesNo;
+//
+//        do{
+//        System.out.println("Enter an integer between 1 and 10: ");
+//        userSelection = sc.nextInt();
+//        if (userSelection >= 1 && userSelection <= 10) {
+//            System.out.println(userSelection);
+//        }else if (userSelection < 1 || userSelection > 10) {
+//            System.out.println("That is not between 1 and 10 ");
+//        }
+//
+//        System.out.print("Would you like to enter another number? (Y/N): ");
+//        yesNo = sc.next();
+//        System.out.println();
+//
+//        }
+//
+//        while(!yesNo.equalsIgnoreCase("N"));
+//
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int userSelection;
         String yesNo;
 
-        do{
-        System.out.println("Enter an integer between 1 and 10: ");
-        userSelection = sc.nextInt();
-        if (userSelection >= 1 && userSelection <= 10) {
-            System.out.println(userSelection);
-        }else if (userSelection < 1 || userSelection > 10) {
-            System.out.println("That is not between 1 and 10 ");
-        }
+        do {
+            System.out.println("Enter and integer between 1 and 10 ");
+            userSelection = sc.nextInt();
+            if (userSelection >= 1 && userSelection <= 10) {
+                System.out.println("The number " + userSelection + " is between 1-10 ");
+            } else if (userSelection < 1 || userSelection > 10) {
+                System.out.println("That is not between 1 and 10 ");
+            }
 
-        System.out.print("Would you like to enter another number? (Y/N): ");
-        yesNo = sc.next();
-        System.out.println();
+            int factorial = 1;
+            int factorialResult = factorial(userSelection, factorial);
 
+            System.out.println(userSelection + "! = " + factorialResult);
+
+            System.out.println("Would you like to enter another number? (Y/N): ");
+            yesNo = sc.next();
+            System.out.println();
         }
 
         while(!yesNo.equalsIgnoreCase("N"));
-
-
-
     }
 
-
-
-
-
+    public static int factorial(int userSelection, int factorial) {
+        for (int i = 1; i <= userSelection; i++) {
+            factorial = factorial * i;
+        }
+        return factorial;
+    }
 
 }
+
+
+
+
+
+
