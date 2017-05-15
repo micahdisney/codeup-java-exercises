@@ -3,6 +3,8 @@
  */
 
 import java.util.Scanner;
+import java.util.Random;
+
 
 public class MethodsExercise {
 
@@ -75,42 +77,94 @@ public class MethodsExercise {
 //
 //        while(!yesNo.equalsIgnoreCase("N"));
 //
+//
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        int userSelection;
+//        String yesNo;
+//
+//        do {
+//            System.out.println("Enter and integer between 1 and 10 ");
+//            userSelection = sc.nextInt();
+//            if (userSelection >= 1 && userSelection <= 10) {
+//                System.out.println("The number " + userSelection + " is between 1-10 ");
+//            } else if (userSelection < 1 || userSelection > 10) {
+//                System.out.println("That is not between 1 and 10 ");
+//            }
+//
+//            int factorial = 1;
+//            int factorialResult = factorial(userSelection, factorial);
+//
+//            System.out.println(userSelection + "! = " + factorialResult);
+//
+//            System.out.println("Would you like to enter another number? (Y/N): ");
+//            yesNo = sc.next();
+//            System.out.println();
+//        }
+//
+//        while(!yesNo.equalsIgnoreCase("N"));
+//    }
+//
+//    public static int factorial(int userSelection, int factorial) {
+//        for (int i = 1; i <= userSelection; i++) {
+//            factorial = factorial * i;
+//        }
+//        return factorial;
+//    }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int userSelection;
-        String yesNo;
 
-        do {
-            System.out.println("Enter and integer between 1 and 10 ");
-            userSelection = sc.nextInt();
-            if (userSelection >= 1 && userSelection <= 10) {
-                System.out.println("The number " + userSelection + " is between 1-10 ");
-            } else if (userSelection < 1 || userSelection > 10) {
-                System.out.println("That is not between 1 and 10 ");
-            }
 
-            int factorial = 1;
-            int factorialResult = factorial(userSelection, factorial);
 
-            System.out.println(userSelection + "! = " + factorialResult);
+        public static void main(String[] args) {
+            int sides;
+            int firstDie;
+            int secondDie;
+            String yesNo;
+            boolean askAgain = true;
 
-            System.out.println("Would you like to enter another number? (Y/N): ");
-            yesNo = sc.next();
-            System.out.println();
+            Scanner sc = new Scanner(System.in);
+            Random rand = new Random();
+
+
+            do {
+                do {
+                    System.out.print("How many sides do you want the dice to have?: ");
+                    sides = sides(sc);
+                } while (sides <= 1);
+
+
+                do {
+                    System.out.println("Would you like to roll? (Y/N): ");
+                    yesNo = sc.next();
+                    System.out.println();
+                }
+
+                while (yesNo.equalsIgnoreCase("N"));
+
+
+                firstDie = randomNumber(rand, sides);
+                secondDie = randomNumber(rand, sides);
+
+                System.out.println("Roll = " + firstDie + " , " + secondDie);
+
+                do {
+                    System.out.println("Would you like to roll? (Y/N): ");
+                    yesNo = sc.next();
+                    System.out.println();
+                } while (yesNo.equalsIgnoreCase("N"));
+            } while (askAgain);
         }
 
-        while(!yesNo.equalsIgnoreCase("N"));
-    }
-
-    public static int factorial(int userSelection, int factorial) {
-        for (int i = 1; i <= userSelection; i++) {
-            factorial = factorial * i;
+        public static int sides (Scanner anyScanner) {
+            return anyScanner.nextInt();
         }
-        return factorial;
+
+        public static int randomNumber (Random anyRandom, int maxNumber) {
+            return anyRandom.nextInt(maxNumber - 1) + 1;
+        }
     }
 
-}
+
 
 
 
