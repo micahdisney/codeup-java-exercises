@@ -6,6 +6,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 
+
 public class MethodsExercise {
 
 
@@ -114,55 +115,70 @@ public class MethodsExercise {
 
 
 
+//
+//        public static void main(String[] args) {
+//            int sides;
+//            int firstDie;
+//            int secondDie;
+//            String yesNo;
+//            boolean askAgain = true;
+//
+//            Scanner sc = new Scanner(System.in);
+//            Random rand = new Random();
+//
+//
+//            do {
+//                do {
+//                    System.out.print("How many sides do you want the dice to have?: ");
+//                    sides = sides(sc);
+//                } while (sides <= 1);
+//
+//
+//                do {
+//                    System.out.println("Would you like to roll? (Y/N): ");
+//                    yesNo = sc.next();
+//                    System.out.println();
+//                }
+//
+//                while (yesNo.equalsIgnoreCase("N"));
+//
+//
+//                firstDie = randomNumber(rand, sides);
+//                secondDie = randomNumber(rand, sides);
+//
+//                System.out.println("Roll = " + firstDie + " , " + secondDie);
+//
+//                do {
+//                    System.out.println("Would you like to roll? (Y/N): ");
+//                    yesNo = sc.next();
+//                    System.out.println();
+//                } while (yesNo.equalsIgnoreCase("N"));
+//            } while (askAgain);
+//        }
+//
+//        public static int sides (Scanner anyScanner) {
+//            return anyScanner.nextInt();
+//        }
+//
+//        public static int randomNumber (Random anyRandom, int maxNumber) {
+//            return anyRandom.nextInt(maxNumber - 1) + 1;
+//        }
 
-        public static void main(String[] args) {
-            int sides;
-            int firstDie;
-            int secondDie;
-            String yesNo;
-            boolean askAgain = true;
 
-            Scanner sc = new Scanner(System.in);
-            Random rand = new Random();
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("This is a guessing game. Pick a number between 1-100 ");
 
 
-            do {
-                do {
-                    System.out.print("How many sides do you want the dice to have?: ");
-                    sides = sides(sc);
-                } while (sides <= 1);
-
-
-                do {
-                    System.out.println("Would you like to roll? (Y/N): ");
-                    yesNo = sc.next();
-                    System.out.println();
-                }
-
-                while (yesNo.equalsIgnoreCase("N"));
-
-
-                firstDie = randomNumber(rand, sides);
-                secondDie = randomNumber(rand, sides);
-
-                System.out.println("Roll = " + firstDie + " , " + secondDie);
-
-                do {
-                    System.out.println("Would you like to roll? (Y/N): ");
-                    yesNo = sc.next();
-                    System.out.println();
-                } while (yesNo.equalsIgnoreCase("N"));
-            } while (askAgain);
-        }
-
-        public static int sides (Scanner anyScanner) {
-            return anyScanner.nextInt();
-        }
-
-        public static int randomNumber (Random anyRandom, int maxNumber) {
-            return anyRandom.nextInt(maxNumber - 1) + 1;
-        }
     }
+
+
+    public static int randomNumber(Random anyRandom, int maxNumber) {
+        return anyRandom.nextInt(maxNumber - 1) + 1;
+    }
+
+}
 
 
 
