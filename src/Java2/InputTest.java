@@ -7,30 +7,29 @@ import java.util.Scanner;
  */
 public class InputTest {
 
-    private static Scanner scanner;
+//    private static Scanner scanner;
 
     public static void main(String[] args) {
 
-        Input userInput = new Input(scanner);
+        Input userInput = new Input();
 
-
+        System.out.println("Enter some words here please: ");
         String userWords = userInput.getString();
-        System.out.println(userWords);
 
+        System.out.println("Please enter an integer between 1-10: ");
         int integerOneTen = userInput.getInt(1, 10);
-        System.out.println(integerOneTen);
 
+        System.out.println("Enter any integer you want: ");
         int anyNumber = userInput.getInt();
-        System.out.println(anyNumber);
 
+        System.out.println("Enter any decimal number between 1-10: ");
         double doubleOneTen = userInput.getDouble(0.00, 10.00);
-        System.out.println(doubleOneTen);
 
+        System.out.println("Enter any decimal number you want: ");
         double anyDouble = userInput.getDouble();
-        System.out.println(anyDouble);
 
-        boolean wantToContinue = userInput.yesNo();
-        System.out.println(wantToContinue);
+        System.out.println("Would you like to see a summary of your answers? ");
+        userInput.yesNo();
 
         System.out.println("");
         System.out.println("Here are all of your answers: ");
